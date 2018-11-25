@@ -1,0 +1,20 @@
+#productTable a {
+}
+
+#productTable a:link,
+#productTable a:visited {
+    color: #3b5bd2;
+    text-decoration: underline;
+}
+
+#productTable a:hover {
+    color: #FF6600;
+}
+
+.product-thumbnail {
+    width: 100px;
+    height: 100px;
+    border: solid 1px #cccccc;
+    border-radius: 4px;
+    display: none;
+}

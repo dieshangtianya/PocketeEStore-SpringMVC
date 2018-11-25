@@ -1,0 +1,340 @@
+/**********************************
+ *                   **************
+ *   Header Style    **************
+ *                   **************
+ **********************************/
+
+a,
+a:link,
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #FF6600;
+}
+
+.app-header {
+    height: auto;
+}
+
+/******* header-top-bar ***********/
+
+.app-header .top-bar {
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    line-height: 50px;
+    overflow: visible;
+    color: #E3DFDF;
+    padding-left: 15px;
+}
+
+.app-header .top-bar .nav-separator {
+    color: #615C5C;
+}
+
+.app-header .top-bar a {
+    color: #E3DFDF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.app-header .top-bar a:link,
+.app-header .top-bar a:visited {
+    color: #E3DFDF;
+}
+
+.app-header .top-bar a:hover {
+    color: #FF6600;
+}
+
+.app-header .top-bar .top-bar-nav {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.app-header #btn-exist{
+    margin-left: 10px;
+}
+
+.app-header .top-bar .top-bar-cart {
+    margin-left: 15px;
+    width: 150px;
+    text-align: center;
+    float: right;
+    background-color: #FF6600;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+}
+
+.app-header .top-bar .top-bar-cart:hover {
+    background-color: #FFF;
+    color: #4c4c4c;
+}
+
+.app-header .top-bar .top-bar-cart .cart-text, .icon-cart {
+    vertical-align: middle;
+}
+
+.app-header .top-bar .top-bar-cart .icon-cart {
+    font-size: 16px;
+}
+
+.app-header .top-bar .top-bar-cart .cart-info {
+    position: absolute;
+    width: 360px;
+    display: none;
+    min-height: 60px;
+    padding: 10px;
+    right: 0;
+    top: 50px;
+    z-index: 15;
+    background-color: #FFF;
+    box-shadow: -2px 20px 30px 2px #d9d8da;
+}
+
+.app-header .top-bar .top-bar-cart:hover .cart-info {
+    display: block;
+}
+
+.app-header .cart-info .empty-cart {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.app-header .cart-info .empty-cart i {
+    vertical-align: middle;
+}
+
+.app-header .cart-info .cart-detail {
+}
+
+.app-header .cart-info .cart-detail .cart-item-list {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.app-header .cart-info .cart-detail .cart-item {
+    line-height: 20px;
+    border: 0 dashed #cccdd0;
+    border-bottom-width: 1px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    padding: 5px 0;
+    height: 70px;
+}
+
+/*.app-header .cart-info .cart-detail .cart-item:first-of-type {*/
+    /*border-top-width: 1px;*/
+/*}*/
+
+.app-header .cart-info .cart-detail .cart-item:last-of-type {
+    border-bottom-width: 0;
+}
+
+.app-header .cart-item .cart-item-left {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    padding-right: 5px;
+}
+
+.app-header .cart-item .cart-item-left img {
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+}
+
+.app-header .cart-item .cart-item-left .cart-item-name {
+    display: inline-block;
+    height: 60px;
+    overflow: hidden;
+}
+
+.app-header .cart-item a,
+.app-header .cart-item a:link,
+.app-header .cart-item a:visited {
+    color: #4c4c4c;
+}
+
+.app-header .cart-item a:hover {
+    color: #FF6600;
+}
+
+.app-header .cart-item .cart-item-right {
+    width: 100px;
+}
+
+.app-header .cart-item .cart-item-right div {
+    text-align: right;
+}
+
+.app-header .top-bar .top-bar-cart .cart-info .cart-detail .cart-summary {
+    height: 50px;
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 20px;
+}
+
+.app-header .top-bar .go-cart {
+    padding: 5px 10px;
+    background-color: #FF6600;
+    color: #FFFFFF;
+}
+
+.app-header .top-bar .go-cart:link, .app-header .top-bar .go-cart:visited {
+    color: #FFFFFF;
+}
+
+.app-header .top-bar .go-cart:hover {
+    color: #FFFFFF;
+}
+
+.app-header .top-bar .top-bar-info {
+    float: right;
+}
+
+/******* header-search-bar ***********/
+
+.app-header .search-bar {
+    padding: 25px;
+    position: relative;
+}
+
+.app-header .search-bar .search-box-wrapper {
+    width: 600px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    flex-flow: row nowrap;
+}
+
+.app-header .search-bar .search-box {
+    flex: auto;
+    border: solid 1px #B1AFB1;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+    padding: 5px 0;
+    display: flex;
+}
+
+.app-header .search-bar .search-button {
+    width: 80px;
+    border: solid 1px #B1AFB1;
+    border-radius: 0 4px 4px 0;
+    background-color: #d2d1d3;
+    cursor: pointer;
+}
+
+.app-header .search-bar .search-input {
+    border: 0;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    background-color: transparent;
+    width: 100%;
+}
+
+/******* header nav-bar **************/
+.app-header .nav-bar {
+    border-bottom: solid 2px #FF6600;
+}
+
+.app-header .nav-bar ul.nav-list {
+    margin-bottom: 0;
+}
+
+.app-header .nav-bar li.nav-item {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.app-header .nav-bar a:link,
+.app-header .nav-bar a:visited {
+    color: #000;
+}
+
+.app-header .nav-bar a:hover {
+    text-decoration: none;
+    color: #FF6600;
+}
+
+.app-header .nav-bar li.nav-item.product-category {
+    width: 200px;
+    padding: 10px 0;
+    background-color: #FF6600;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+}
+
+/**********************************
+ *                   **************
+ *   Content Style   **************
+ *                   **************
+ **********************************/
+.app-content {
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.app-content .left-panel {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    box-shadow: 1px -5px 5px 1px #ecedf0;
+}
+
+.app-content .right-panel {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/**********************************
+ *                   **************
+ *   Footer Style    **************
+ *                   **************
+ **********************************/
+
+.app-footer {
+    border-top: solid 1px #DCDCDC;
+    padding: 10px 0;
+}
+
+.app-footer .web-helper-content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.app-footer .web-helper-content .helper-block {
+    width: 225px;
+    float: left;
+}
+
+.app-footer .web-helper-content .helper-block li {
+    margin: 5px 0;
+}
+
+.app-footer .footer-nav {
+    border-top: solid 1px #DCDCDC;
+    padding: 5px 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.app-footer .footer-nav .separator {
+    color: #8d8d8d;
+}

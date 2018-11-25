@@ -1,0 +1,16 @@
+ul.product-category-panel {
+    margin-top: 5px;
+}
+
+ul.product-category-panel li {
+    padding: 5px 10px 5px 20px;
+}
+
+ul.product-category-panel li:hover {
+    background-color: #FF6600;
+    color: #FFF;
+}
+
+ul.product-category-panel li a:hover {
+    color: #FFF;
+}

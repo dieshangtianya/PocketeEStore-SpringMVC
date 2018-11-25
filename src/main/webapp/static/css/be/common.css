@@ -1,0 +1,45 @@
+.button {
+    background-color: #464646;
+}
+
+.button.button-second {
+    background-color: #B1AFB1;
+}
+
+.button:hover, button-second:hover {
+    background-color: #FF6600;
+}
+
+.field-label {
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+}
+
+.field-label.textArea-lable {
+    vertical-align: top;
+}
+
+.field-control {
+    width: 300px;
+    display: inline-block;
+}
+
+.field-control .bootstrap-tagsinput {
+    display: block;
+}
+
+input[type=file].field-control {
+    display: inline-block;
+}
+
+.page-content {
+    padding: 10px;
+}
+
+
+
+
+
+
+

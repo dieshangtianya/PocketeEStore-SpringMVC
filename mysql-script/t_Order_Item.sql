@@ -1,0 +1,12 @@
+/*创建 订单项关联表 t_Order*/
+
+DROP TABLE IF EXISTS t_Order_Item;
+
+CREATE TABLE IF NOT EXISTS t_Order_Item(
+  Id CHAR(36) PRIMARY KEY,
+  OrderId CHAR(36) NOT NULL,
+  SkuId CHAR(36) NOT NULL,
+  Price DECIMAL NOT NULL,
+  Quantity INT NOT NULL,
+  Subtotal DECIMAL NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,9 @@
+/*创建 客户购物车表 t_Category*/
+
+DROP TABLE IF EXISTS t_Cart;
+
+CREATE TABLE IF NOT EXISTS t_Cart(
+  Id CHAR(36) PRIMARY KEY,
+  CustomerId CHAR(36) NOT NULL,
+  CreatedDate DATETIME NOT NULL DEFAULT  NOW()
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

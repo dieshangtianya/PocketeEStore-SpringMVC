@@ -1,0 +1,209 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #464646;
+    color: #FFF;
+    height: 100%;
+}
+
+.app {
+    height: 100%;
+}
+
+/**********************************
+ *                   **************
+ *   Header Style    **************
+ *                   **************
+ **********************************/
+.app-header {
+    height: 60px;
+    line-height: 60px;
+    background-color: #363636;
+    padding: 0 10px;
+}
+
+.app-header .header-section {
+    height: 60px;
+}
+
+.app-header .header-section .drawer-toggle {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}
+
+.app-header .header-section .drawer-toggle::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: #8d8d8d;
+    left: 13px;
+    top: 18px;
+    box-shadow: 0 6px 0 #8d8d8d, 0 12px 0 #8d8d8d;
+}
+
+.app-header .header-section .header-product {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.app-header .header-section .header-nav {
+    float: right;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.app-header .header-section .header-nav span{
+    vertical-align: middle;
+}
+
+.app-header .header-section .header-nav .logout {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/**********************************
+ *                   **************
+ *   Content Style    **************
+ *                   **************
+ **********************************/
+.app-content {
+    height: calc(100% - 60px);
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
+
+.app-content .drawer-panel {
+    width: 250px;
+    float: left;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #363636;
+    border-radius: 5px;
+}
+
+.app-content .right-panel {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.app-content .right-panel .bread-crumb {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #363636;
+    border-radius: 5px;
+}
+
+.app-content .right-panel .bread-crumb a,
+.app-content .right-panel .bread-crumb a:link,
+.app-content .right-panel .bread-crumb a:visited {
+    color: #d2d2d2;
+}
+
+.app-content .right-panel .bread-crumb a:hover {
+    color: #FF6600;
+}
+
+.app-content .right-panel .bread-crumb .bread-separator {
+    margin: 0 5px;
+}
+
+.app-content .right-panel .bread-crumb .current {
+    color: #d2d2d2;
+}
+
+.app-content .right-panel .main-content-wrapper {
+    padding: 5px;
+    flex: 1;
+    background-color: #363636;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.app-content .right-panel .main-content {
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 5px;
+    color: #363636;
+    overflow: auto;
+    padding: 10px;
+}
+
+.app-content .menu {
+
+}
+
+.menu .menu-item {
+    background-color: #414141;
+    padding: 8px 10px;
+    text-align: left;
+    color: #FFF;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu .menu-item.active, .menu .menu-item.child-item.active {
+    background-color: #FF6600;
+}
+
+.menu .menu-item.active .icon, .menu .menu-item.child-item.active .icon {
+    color: #FFF;
+}
+
+.menu .menu-item.child-item {
+    background-color: transparent;
+    border-bottom: solid 1px #404040;
+    margin: 0;
+    padding-left: 30px;
+}
+
+.menu .menu-item:hover, menu-item.child-item:hover {
+    background-color: #FF6600;
+}
+
+.menu .menu-item:hover .icon, .menu .menu-item.child-item:hover .icon {
+    color: #FFF;
+}
+
+.menu .menu-item .menu-text {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.menu .menu-item a.menu-text,
+.menu .menu-item a.menu-text:link,
+.menu .menu-item a.menu-text:hover,
+.menu .menu-item a.menu-text:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.menu .menu-item .icon {
+    vertical-align: middle;
+    color: #FF6600;
+}
+
+.menu .menu-item .toggle-expand {
+    float: right;
+}
+
+/**********************************
+ *                   **************
+ *   footer Style    **************
+ *                   **************
+ **********************************/
+.app-footer {
+
+}

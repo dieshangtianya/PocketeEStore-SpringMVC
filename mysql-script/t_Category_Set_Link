@@ -1,0 +1,9 @@
+/*创建 分类_分类组合_关联 t_Category_Set_Link*/
+
+DROP TABLE IF EXISTS t_Category_Set_Link;
+
+CREATE TABLE IF NOT EXISTS t_Category_Set_Link(
+    Id CHAR(36) Primary key,
+    SetId CHAR(36) NOT NULL,
+    CategoryId CHAR(36) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

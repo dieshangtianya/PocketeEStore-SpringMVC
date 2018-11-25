@@ -1,0 +1,49 @@
+.pure-header {
+    position: relative;
+}
+
+.pure-header .login-tip {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.pure-header .login-tip a {
+    color: #FF6600;
+}
+
+.register-body {
+    min-height: 500px;
+    overflow: hidden;
+    background: url(../../images/register-bg.jpg);
+}
+
+.register-form {
+    margin: 50px auto;
+    width: 600px;
+    min-height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 40px 5px #160d0d;
+}
+
+.operation-bar {
+    text-align: right;
+}
+
+.btn-register {
+    padding: 10px 50px;
+}
+
+.register-info {
+    padding: 20px;
+}
+
+.register-form .error-tip {
+    color: #e63726;
+}
+
+.register-form #success-tip{
+    color:forestgreen;
+}

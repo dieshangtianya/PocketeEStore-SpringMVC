@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status : 指定log4j本身的打印日志的级别.
+              ALL< Trace < DEBUG < INFO < WARN < ERROR < FATAL < OFF。
+              monitorInterval : 用于指定log4j自动重新配置的监测间隔时间，单位是s,最小是5s.
+-->
+<Configuration status="WARN" monitorInterval="50">
+    <properties>
+        <property name="LOG_HOME">${sys:catalina.home}/webapps/pocketestore/logs</property>
+        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t-%L] %-5level %logger{36} - %msg%n</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PATTERN}"/>
+        </Console>
+        <RollingFile name="error_appender" fileName="${LOG_HOME}/error.log"
+                     filePattern="${LOG_HOME}/error-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="operation_appender" fileName="${LOG_HOME}/operation.log"
+                     filePattern="${LOG_HOME}/operation-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="storeLog" level="warn">
+            <AppenderRef ref="error_appender"/>
+        </Logger>
+        <Logger name="operationLog" level="info">
+            <AppenderRef ref="operation_appender"/>
+        </Logger>
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

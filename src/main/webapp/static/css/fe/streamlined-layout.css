@@ -1,0 +1,166 @@
+/**********************************
+ *                   **************
+ *   Header Style    **************
+ *                   **************
+ **********************************/
+
+a,
+a:link,
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #FF6600;
+}
+
+.app-header {
+    height: auto;
+}
+
+/******* header-top-bar ***********/
+
+.app-header .top-bar {
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    line-height: 50px;
+    overflow: visible;
+    color: #E3DFDF;
+    padding-left: 15px;
+}
+
+.app-header .top-bar .nav-separator {
+    color: #615C5C;
+}
+
+.app-header .top-bar a {
+    color: #E3DFDF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.app-header .top-bar a:link,
+.app-header .top-bar a:visited {
+    color: #E3DFDF;
+}
+
+.app-header .top-bar a:hover {
+    color: #FF6600;
+}
+
+.app-header .top-bar .top-bar-nav {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.app-header .top-bar .top-bar-info {
+    float: right;
+    margin-right: 20px;
+}
+
+.app-header #btn-exist{
+    margin-left: 10px;
+}
+
+/******* header-search-bar ***********/
+
+.app-header .search-bar {
+    padding: 25px;
+    position: relative;
+}
+
+.app-header .search-bar .search-box-wrapper {
+    width: 600px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    flex-flow: row nowrap;
+}
+
+.app-header .search-bar .search-box {
+    flex: auto;
+    border: solid 1px #B1AFB1;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+    padding: 5px 0;
+    display: flex;
+}
+
+.app-header .search-bar .search-button {
+    width: 80px;
+    border: solid 1px #B1AFB1;
+    border-radius: 0 4px 4px 0;
+    background-color: #d2d1d3;
+    cursor: pointer;
+}
+
+.app-header .search-bar .search-input {
+    border: 0;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    background-color: transparent;
+    width: 100%;
+}
+
+/**********************************
+ *                   **************
+ *   Content Style   **************
+ *                   **************
+ **********************************/
+.app-content {
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.app-content .left-panel {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    box-shadow: 1px -5px 5px 1px #ecedf0;
+}
+
+.app-content .right-panel {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/**********************************
+ *                   **************
+ *   Footer Style    **************
+ *                   **************
+ **********************************/
+
+.app-footer {
+    border-top: solid 1px #DCDCDC;
+    padding: 10px 0;
+}
+
+.app-footer .web-helper-content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.app-footer .web-helper-content .helper-block {
+    width: 225px;
+    float: left;
+}
+
+.app-footer .web-helper-content .helper-block li {
+    margin: 5px 0;
+}
+
+.app-footer .footer-nav {
+    border-top: solid 1px #DCDCDC;
+    padding: 5px 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.app-footer .footer-nav .separator {
+    color: #8d8d8d;
+}

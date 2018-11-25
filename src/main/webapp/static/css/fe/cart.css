@@ -1,0 +1,163 @@
+.cart-content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.cart-title {
+    padding: 10px 0 5px;
+    border-bottom: solid 5px #FF6600;
+    font-size: 14px;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.cart-table {
+
+}
+
+.cart-table .cart-table-header {
+    background: #333333;
+    color: #FFF;
+}
+
+.cart-table .cart-table-header,
+.cart-table .cart-table-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.cart-table .cart-table-header div {
+    padding: 15px 10px;
+}
+
+.cart-table .cart-table-row div {
+    padding: 5px 10px;
+}
+
+.cart-table .cart-table-body .cart-table-row:nth-child(even) {
+    background-color: #fff3f0;
+}
+
+.cart-table .cell-name {
+    flex: 1;
+}
+
+.cart-table .cell-price {
+    width: 100px;
+    text-align: right;
+}
+
+.cart-table .cell-quantity {
+    width: 150px;
+    text-align: center;
+}
+
+.cart-table .cell-subtotal {
+    width: 150px;
+    text-align: right;
+}
+
+.cart-table .cell-operation {
+    width: 200px;
+    text-align: center;
+}
+
+.cart-table .empty-tip {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 130px;
+    height: 150px;
+    border: solid 1px #333333;
+}
+
+.cart-table .btn-operation {
+    background-color: transparent;
+    text-decoration: underline;
+    border: 0;
+    margin-left: 10px;
+}
+
+.cart-table .btn-operation:hover {
+    color: #FF6600;
+}
+
+.cart-table .cart-table-footer {
+
+}
+
+.cart-table .cart-table-footer .cart-summary {
+    flex: 1;
+    padding: 15px;
+    text-align: right;
+    font-size: 20px;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.cart-table .cart-table-footer .do-order {
+    width: 200px;
+    text-align: right;
+    padding: 15px 0 15px 15px;
+}
+
+.cart-table .cart-table-footer .do-order .btn-order {
+    display: inline-block;
+    width: 150px;
+    background-color: #d01f18;
+    font-size: 20px;
+}
+
+.cart-table .cart-table-footer .go-shopping {
+    width: 150px;
+    padding-left: 0;
+}
+
+.cart-table .cart-table-footer .btn-go-shopping {
+    display: inline-block;
+    width: 150px;
+    background-color: #0790be;
+    font-size: 20px;
+}
+
+.cart-table .cart-table-footer .button:link,
+.cart-table .cart-table-footer .button:visited,
+.cart-table .cart-table-footer .button:hover {
+    color: #FFF;
+}
+
+.i-spinner {
+    display: inline-flex;
+    align-items: center;
+}
+
+.i-spinner .btn-increment, .i-spinner .btn-decrement {
+    padding: 5px;
+    color: #FFFFFF;
+    background: #267144;
+    border: solid 1px #267144;
+}
+
+.i-spinner .btn-increment {
+    border-radius: 0 4px 4px 0;
+}
+
+.i-spinner .btn-decrement {
+    border-radius: 4px 0 0 4px;
+}
+
+.i-spinner .txt-quantity {
+    width: 60px;
+    padding: 5px;
+    border-radius: 0;
+    border: solid 1px #267144;
+    text-align: center;
+}
+
+.order-section div{
+    margin:10px 0;
+}
+.order-section #txtMoney{
+    font-size:14px;
+}

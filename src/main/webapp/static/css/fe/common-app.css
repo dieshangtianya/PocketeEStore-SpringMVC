@@ -1,0 +1,29 @@
+.pure-header {
+    height: 80px;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.pure-header .logo-icon {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+.pure-header:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.pure-footer {
+    padding: 20px;
+}
+
+.pure-footer  .footer-nav {
+    padding: 5px 0;
+    text-align: center;
+    margin: 0 auto;
+}

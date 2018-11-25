@@ -1,0 +1,134 @@
+/**********************
+bootstrap style changes
+**********************/
+
+.btn {
+    font-size: 12px;
+}
+
+.btn-primary {
+    background-color: #464646;
+    border-color: #464646;
+}
+
+.btn-primary:hover {
+    background-color: #FF6600;
+    border-color: #FF6600;
+}
+
+.btn-primary:active {
+    outline: 0;
+    box-shadow: 0 0 0 0 transparent;
+    background-color: #464646;
+    border-color: #464646;
+}
+
+.btn-primary:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0 transparent;
+    background-color: #464646;
+    border-color: #464646;
+}
+
+.form-control {
+    font-size: 12px;
+}
+
+/****************************
+bootstrap table style changes
+*****************************/
+
+.fixed-table-toolbar .bs-bars,
+.fixed-table-toolbar .columns,  
+.fixed-table-toolbar .search  {
+    line-height: inherit !important;
+}
+
+.bootstrap-table .fixed-table-container {
+    /*border-top: 0;*/
+    /*border-bottom: 0;*/
+}
+
+.bootstrap-table .fixed-table-container .fixed-table-body table thead tr th {
+    /*border-bottom: 0;*/
+}
+
+.bootstrap-table .page-item .page-link {
+    background-color: #414141;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.bootstrap-table .page-item apage-link:link,
+.bootstrap-table .page-item apage-link:visited {
+    color: #FFF;
+}
+
+.bootstrap-table .page-item.active .page-link {
+    background-color: #FF6600;
+    border-color: #FFF;
+}
+
+.bootstrap-table .operation-cell {
+    text-align: center;
+}
+
+.bootstrap-table .table tr td {
+    vertical-align: middle;
+}
+
+.bootstrap-table .fixed-table-toolbar .columns {
+    margin: 5px 0;
+}
+
+.bootstrap-table .btn-operation {
+    padding: 3px 5px;
+}
+
+/*********************************
+bootbox style changes
+**********************************/
+.modal-dialog {
+    color: #363636;
+}
+
+.modal-dialog h4 {
+    font-size: 14px;
+}
+
+.modal-header {
+    display: block;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.bootbox-body {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.pes-modal-dialog .modal-header {
+    background-color: #454545;
+    color: #FFF;
+}
+
+.pes-alert-dialog .modal-header {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.pes-warning-dialog .modal-header {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.pes-danger-dialog .modal-header {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.pes-success-dialog .modal-header {
+    background-color: #d4ecda;
+    color: #155724;
+}

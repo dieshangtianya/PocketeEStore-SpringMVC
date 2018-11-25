@@ -1,0 +1,12 @@
+/*创建 产品分类表 t_Category*/
+
+DROP TABLE IF EXISTS t_Category;
+
+CREATE TABLE IF NOT EXISTS t_Category(
+  Id CHAR(36) PRIMARY KEY,
+  ParentId CHAR(36)  NULL,
+  CategoryName CHAR(50) NOT NULL,
+  State CHAR(1) NOT NULL DEFAULT 1,
+  Description VARCHAR(50) NULL,
+  CreatedDate DATETIME NOT NULL DEFAULT  NOW()
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
