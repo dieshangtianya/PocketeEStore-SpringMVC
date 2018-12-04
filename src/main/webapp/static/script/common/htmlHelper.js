@@ -120,43 +120,44 @@ var htmlHelper = (function () {
                     $(tableSelector).bootstrapTable('resetView');
                 }, 500)
             });
-        }
-
-        var predefinedColumns = {
-            rowNumber: {
-                title: '编号',
-                field: 'gridNumber',
-                width: 60,
-            },
-            state: {
-                field: 'state',
-                title: '状态',
-                formatter: function (value) {
-                    if (value === '1') {
-                        return '启用';
-                    } else {
-                        return '禁用'
-                    }
-                }
-            },
-            createdDate: {
-                field: 'createdDate',
-                title: '创建日期'
-            },
-            commonOperation: {
-                field: 'Name', title: '操作',
-                width: 140,
-                align: 'center',
-                formatter: function (value, row, index) {
-                    return [
-                        '<button type="button" class="btn btn-primary btn-sm btn-operation edit" style="margin-right:15px;">修改</button>',
-                        '<button type="button" class="btn btn-primary btn-sm btn-operation delete">删除</button>',
-                    ].join('');
-                }
-            }
         };
 
-        generateHtmlTable.predefinedColumns = predefinedColumns;
+        generateHtmlTable.getPredefinedColumns = function () {
+            var predefinedColumns = {
+                rowNumber: {
+                    title: '编号',
+                    field: 'gridNumber',
+                    width: 60,
+                },
+                state: {
+                    field: 'state',
+                    title: '状态',
+                    formatter: function (value) {
+                        if (value === '1' || value === 1) {
+                            return '启用';
+                        } else {
+                            return '禁用'
+                        }
+                    }
+                },
+                createdDate: {
+                    field: 'createdDate',
+                    title: '创建日期'
+                },
+                commonOperation: {
+                    field: 'Name', title: '操作',
+                    width: 140,
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        return [
+                            '<button type="button" class="btn btn-primary btn-sm btn-operation edit" style="margin-right:15px;">修改</button>',
+                            '<button type="button" class="btn btn-primary btn-sm btn-operation delete">删除</button>',
+                        ].join('');
+                    }
+                }
+            };
+            return predefinedColumns;
+        };
 
         /**notification**/
         var notify = function (title, message, type, customIcon) {

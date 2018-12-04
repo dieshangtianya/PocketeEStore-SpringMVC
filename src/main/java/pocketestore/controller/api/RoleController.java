@@ -15,7 +15,7 @@ import java.util.Map;
 public class RoleController {
     @RequestMapping(value = "/list/v1", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> resourceList(@RequestBody Map<String, Object> map) {
+    public Map<String, Object> roleList(@RequestBody Map<String, Object> map) {
         int page = (int) map.get("page");
         int limit = (int) map.get("limit");
         IRoleService roleService = new RoleService();

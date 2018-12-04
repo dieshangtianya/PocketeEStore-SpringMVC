@@ -1,4 +1,4 @@
-//@ sourceUrl=product-list.js
+//@ sourceUrl=order-list.js
 
 (function () {
     $(document).ready(function () {
@@ -6,16 +6,19 @@
     });
 
     function buildOrderList() {
-        var predefinedColumns = htmlHelper.table.predefinedColumns;
+        var predefinedColumns = htmlHelper.table.getPredefinedColumns();
         var operationColumn = predefinedColumns.commonOperation;
         operationColumn.formatter = function (value, row, index) {
             return [
                 '<button type="button" class="btn btn-primary btn-sm btn-operation edit" style="margin-right:15px;">修改状态</button>',
+                '<button type="button" class="btn btn-primary btn-sm btn-operation detail">查看详细</button>',
             ].join('');
-        }
+        };
         operationColumn.events = {
             'click .btn-operation.edit': operationEditClick,
+            'click .btn-operation.detail': operationShowDetail
         };
+        operationColumn.width = 160;
         var config = {
             url: APPHelper.APIMap.ORDER_LIST,
             height: 450,
@@ -68,6 +71,10 @@
     }
 
     function operationEditClick() {
-        htmlHelper.showAlert("暂未实现")
+        htmlHelper.showAlert("暂未实现");
+    }
+
+    function operationShowDetail() {
+        htmlHelper.showAlert("暂未实现");
     }
 })();

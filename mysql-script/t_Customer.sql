@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS t_Customer;
 
 CREATE TABLE IF NOT EXISTS t_Customer(
     Id CHAR(36) PRIMARY KEY,
-    CustomerName VARCHAR(50) NOT NULL,
+    CustomerName VARCHAR(50) NOT NULL UNIQUE,
     Password VARCHAR(30) NOT NULL,
     Sex CHAR(1) NULL,
     Email VARCHAR(100) NOT NULL,

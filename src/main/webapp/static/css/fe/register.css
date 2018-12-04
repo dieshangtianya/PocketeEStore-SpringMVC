@@ -15,7 +15,8 @@
 .register-body {
     min-height: 500px;
     overflow: hidden;
-    background: url(../../images/register-bg.jpg);
+    background: url(../../images/register-bg.jpg) no-repeat;
+    background-size: cover;
 }
 
 .register-form {

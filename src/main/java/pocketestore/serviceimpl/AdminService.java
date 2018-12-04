@@ -2,6 +2,7 @@ package pocketestore.serviceimpl;
 
 import pocketestore.dao.IAdminDao;
 import pocketestore.dao.IRoleDao;
+import pocketestore.infrastructure.exceptions.BusinessException;
 import pocketestore.model.Admin;
 import pocketestore.model.PaginationData;
 import pocketestore.model.Role;
@@ -21,7 +22,7 @@ public class AdminService implements IAdminService {
     public AdminService() {
         DaoFactory daoFactory = DaoFactory.getInstance();
         adminDao = (IAdminDao) daoFactory.createDao("AdminDaoImpl");
-        roleDao=(IRoleDao)daoFactory.createDao("RoleDaoImpl");
+        roleDao = (IRoleDao) daoFactory.createDao("RoleDaoImpl");
     }
 
     public Admin getAdminByNameAndPassword(String userName, String password) {
@@ -43,7 +44,7 @@ public class AdminService implements IAdminService {
         Admin admin = null;
         try {
             admin = adminDao.getById(adminId);
-            List<Role> roleList=roleDao.getAdminRoles(adminId);
+            List<Role> roleList = roleDao.getAdminRoles(adminId);
             admin.setRoles(roleList);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -59,5 +60,42 @@ public class AdminService implements IAdminService {
             ex.printStackTrace();
             return new PaginationData<>();
         }
+    }
+
+    @Override
+    public boolean addAdmin(Admin admin) throws Exception {
+        Admin existAdmin = adminDao.getByAdminName(admin.getAdminName());
+        if (existAdmin != null) {
+            throw new BusinessException("已存在用户名为" + admin.getAdminName() + "的用户");
+        }
+        String md5Pwd = getMD5PasswordFromBase64(admin.getPassword());
+        admin.setPassword(md5Pwd);
+        return adminDao.add(admin);
+    }
+
+    @Override
+    public boolean deleteAdmin(String adminId) throws Exception {
+        Admin admin = adminDao.getById(adminId);
+        if (admin == null) {
+            throw new BusinessException("要删除的管理员不存在");
+        }
+        return adminDao.remove(adminId);
+    }
+
+    @Override
+    public boolean updateAdmin(Admin admin) throws Exception {
+        Admin existAdmin = adminDao.getById(admin.getId());
+        if (!admin.getPassword().equals(existAdmin.getPassword())) {
+            String md5Pwd = getMD5PasswordFromBase64(admin.getPassword());
+            admin.setPassword(md5Pwd);
+        }
+        return adminDao.update(admin);
+    }
+
+    private String getMD5PasswordFromBase64(String base64Password) throws Exception {
+        final Base64.Decoder decoder = Base64.getDecoder();
+        String originalPassword = new String(decoder.decode(base64Password), "UTF-8");
+        String md5Password = EncodeHelper.encodeWithMD5(originalPassword);
+        return md5Password;
     }
 }

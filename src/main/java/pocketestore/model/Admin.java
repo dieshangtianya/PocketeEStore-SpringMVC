@@ -1,16 +1,17 @@
 package pocketestore.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.*;
 
-public class Admin extends EntityBase{
+public class Admin extends EntityBase {
     private String adminName;
     private String password;
-    private String sex;
+    private Sex sex;
     private String email;
     private String phone;
-    private String state;
+    private State state;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createdDate;
     private List<Role> roles;
@@ -31,11 +32,11 @@ public class Admin extends EntityBase{
         this.password = password;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 
@@ -55,11 +56,11 @@ public class Admin extends EntityBase{
         this.phone = phone;
     }
 
-    public String getState() {
+    public State getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(State state) {
         this.state = state;
     }
 

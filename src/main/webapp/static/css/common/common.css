@@ -238,16 +238,17 @@ input[type=text], input[type=password] {
     font-weight: bold;
 }
 
-.dialog-body-content{
+.dialog-body-content {
     display: none;
 }
 
 /**文件上传默认属性**/
 
-.file-upload-wrapper{
+.file-upload-wrapper {
     vertical-align: top;
 }
-.file-upload{
+
+.file-upload {
     padding: 4px 10px;
     position: relative;
     cursor: pointer;
@@ -262,7 +263,7 @@ input[type=text], input[type=password] {
     *zoom: 1
 }
 
-.file-upload  input {
+.file-upload input {
     position: absolute;
     font-size: 100px;
     right: 0;
@@ -279,6 +280,6 @@ input[type=text], input[type=password] {
     text-decoration: none
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }

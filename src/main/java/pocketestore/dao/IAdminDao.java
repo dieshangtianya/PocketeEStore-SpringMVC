@@ -6,6 +6,8 @@ import pocketestore.model.Role;
 
 import java.util.ArrayList;
 
-public interface IAdminDao extends IEntityDao<Admin>{
-    Admin getByAdminNameAndPWD(String customerName, String pwd) throws Exception;
+public interface IAdminDao extends IEntityDao<Admin> {
+    Admin getByAdminNameAndPWD(String adminName, String pwd) throws Exception;
+
+    Admin getByAdminName(String adminName) throws Exception;
 }

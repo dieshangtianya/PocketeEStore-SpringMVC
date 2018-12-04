@@ -38,7 +38,8 @@ public class ResourceService implements IResourceService {
                         .map(roleItem -> {
                             return roleItem.getId();
                         }).collect(Collectors.toList());
-                resourceList = resourceDao.getResourcesByRoleIdArray((String[]) roleIdList.toArray());
+                String[] roleIdArray = roleIdList.toArray(new String[roleIdList.size()]);
+                resourceList = resourceDao.getResourcesByRoleIdArray(roleIdArray);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
