@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS t_Admin;
 
 CREATE TABLE IF NOT EXISTS t_Admin(
     Id CHAR(36) Primary key,
-    AdminName VARCHAR(50) NOT NULL,
+    AdminName VARCHAR(50) NOT NULL UNIQUE,
     Password VARCHAR(50) NOT NULL,
     Sex Bool NULL,
     Email VARCHAR(100) NULL,

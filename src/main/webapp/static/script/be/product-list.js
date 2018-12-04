@@ -11,7 +11,7 @@
     });
 
     function buildProductList() {
-        var predefinedColumns = htmlHelper.table.predefinedColumns;
+        var predefinedColumns = htmlHelper.table.getPredefinedColumns();
         var operationColumn = predefinedColumns.commonOperation;
         operationColumn.events = {
             'click .btn-operation.edit': operationEditClick,
@@ -81,7 +81,7 @@
             errors.push('请输入商品价格!');
         }
 
-        if(!webUtil.isNumber(productInfo.price)){
+        if (!webUtil.isNumber(productInfo.price)) {
             errors.push('商品价格只能是数字');
         }
 

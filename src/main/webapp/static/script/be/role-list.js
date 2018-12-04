@@ -4,7 +4,7 @@
     });
 
     function buildRoleTable() {
-        var predefinedColumns = htmlHelper.table.predefinedColumns;
+        var predefinedColumns = htmlHelper.table.getPredefinedColumns();
         var config = {
             url: APPHelper.APIMap.ROLE_LIST,
             height: 450,

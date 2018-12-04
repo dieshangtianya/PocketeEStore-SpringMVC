@@ -2,9 +2,6 @@ package pocketestore.service;
 
 import pocketestore.model.Admin;
 import pocketestore.model.PaginationData;
-import pocketestore.model.Resource;
-
-import java.util.List;
 
 public interface IAdminService {
 
@@ -13,4 +10,10 @@ public interface IAdminService {
     Admin getAdminById(String adminId);
 
     PaginationData<Admin> getAdmins(int pageIndex, int pageSize);
+
+    boolean addAdmin(Admin admin) throws Exception;
+
+    boolean deleteAdmin(String adminId) throws Exception;
+
+    boolean updateAdmin(Admin admin) throws Exception;
 }

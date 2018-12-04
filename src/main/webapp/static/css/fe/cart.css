@@ -72,6 +72,13 @@
     border: solid 1px #333333;
 }
 
+.cart-table .empty-tip a,
+.cart-table .empty-tip a:link,
+.cart-table .empty-tip a:visited{
+    text-decoration: underline;
+    color: #FF6600;
+}
+
 .cart-table .btn-operation {
     background-color: transparent;
     text-decoration: underline;
@@ -155,9 +162,10 @@
     text-align: center;
 }
 
-.order-section div{
-    margin:10px 0;
+.order-section div {
+    margin: 10px 0;
 }
-.order-section #txtMoney{
-    font-size:14px;
+
+.order-section #txtMoney {
+    font-size: 14px;
 }

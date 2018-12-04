@@ -78,7 +78,7 @@ INSERT INTO t_Resource VALUES(UUID(),NULL,'权限管理',1,'/management/features
 SELECT @rbacResourceId:=Id FROM t_Resource WHERE ResourceName='权限管理';
 INSERT INTO t_Resource VALUES(UUID(),@rbacResourceId,'权限资源管理',1,'/management/feature/list',1,'管理所有的功能权限项');
 INSERT INTO t_Resource VALUES(UUID(),@rbacResourceId,'角色管理',1,'/management/role/list',1,'管理所有的角色列表');
-INSERT INTO t_Resource VALUES(UUID(),@rbacResourceId,'用户管理',1,'/management/user/list',1,'管理所有的用户列表');
+INSERT INTO t_Resource VALUES(UUID(),@rbacResourceId,'用户管理',1,'/management/admin/list',1,'管理所有的用户列表');
 
 INSERT INTO t_Resource VALUES(UUID(),NULL,'产品管理',1,'/management/product',1,'商城产品管理');
 INSERT INTO t_Resource VALUES(UUID(),NULL,'分类管理',1,'/management/category',1,'商城分类导航');

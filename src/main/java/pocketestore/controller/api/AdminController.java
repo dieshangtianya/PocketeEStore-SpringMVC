@@ -9,8 +9,10 @@ import pocketestore.model.Admin;
 import pocketestore.model.PaginationData;
 import pocketestore.service.IAdminService;
 import pocketestore.serviceimpl.AdminService;
+import pocketestore.utils.EncodeHelper;
 
 import javax.servlet.http.*;
+import java.util.Base64;
 import java.util.Map;
 
 @Controller("APIAdminController")
@@ -46,13 +48,49 @@ public class AdminController {
         return JsonResponseBuilder.buildSuccessResponse();
     }
 
-    @RequestMapping(value="/list/v1",method =RequestMethod.POST)
+    @RequestMapping(value = "/list/v1", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> resourceList(@RequestBody Map<String, Object> map) {
+    public Map<String, Object> userList(@RequestBody Map<String, Object> map) {
         int page = (int) map.get("page");
         int limit = (int) map.get("limit");
         IAdminService adminService = new AdminService();
         PaginationData<Admin> paginationData = adminService.getAdmins(page, limit);
-        return JsonResponseBuilder.buildSuccessResponse(page,limit,paginationData.getTotal(),paginationData.getPageData());
+        return JsonResponseBuilder.buildSuccessResponse(page, limit, paginationData.getTotal(), paginationData.getPageData());
+    }
+
+    @RequestMapping(value = "/add/v1", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> add(@RequestBody Admin admin) throws Exception {
+        IAdminService adminService = new AdminService();
+        boolean flag = adminService.addAdmin(admin);
+        if (flag) {
+            return JsonResponseBuilder.buildSuccessResponse(true);
+        } else {
+            return JsonResponseBuilder.buildErrorResponse("新增管理员失败");
+        }
+    }
+
+    @RequestMapping(value = "/update/v1", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> update(@RequestBody Admin admin) throws Exception {
+        IAdminService adminService = new AdminService();
+        boolean flag = adminService.updateAdmin(admin);
+        if (flag) {
+            return JsonResponseBuilder.buildSuccessResponse(true);
+        } else {
+            return JsonResponseBuilder.buildErrorResponse("修改管理员失败");
+        }
+    }
+
+    @RequestMapping(value = "/delete/v1", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> delete(String id) throws Exception {
+        IAdminService adminService = new AdminService();
+        boolean flag = adminService.deleteAdmin(id);
+        if (flag) {
+            return JsonResponseBuilder.buildSuccessResponse(true);
+        } else {
+            return JsonResponseBuilder.buildErrorResponse("删除管理员失败");
+        }
     }
 }

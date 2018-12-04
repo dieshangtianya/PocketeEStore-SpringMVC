@@ -4,7 +4,7 @@
     });
 
     function buildResourceTable() {
-        var predefinedColumns = htmlHelper.table.predefinedColumns;
+        var predefinedColumns = htmlHelper.table.getPredefinedColumns();
 
         var config = {
             url: APPHelper.APIMap.FEATURE_LIST,

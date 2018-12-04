@@ -127,5 +127,21 @@ var webUtil = (function () {
         return Number.prototype.toFixed.call(value, 2);
     };
 
+    webUtil.checkEmail = function (emailValue) {
+        var emailExp = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+        if (emailExp.test(emailValue)) {
+            return true;
+        }
+        return false;
+    };
+
+    webUtil.checkPhone = function (phoneValue) {
+        var phoneExp = /^1[34578]\d{9}/;
+        if (phoneExp.test(phoneValue)) {
+            return true;
+        }
+        return false;
+    };
+
     return webUtil;
 })();
