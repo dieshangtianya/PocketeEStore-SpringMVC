@@ -38,7 +38,7 @@
                 {
                     field: 'sex',
                     title: '性别',
-                    width: 200,
+                    width: 100,
                     formatter: function (value) {
                         if (!value || value === 1) {
                             return '男';
@@ -131,7 +131,7 @@
         ).then(function (res) {
             if (res.status === 0 && res.result.data === true) {
                 $dialog.modal('hide');
-                htmlHelper.showAlert('新增管理员成功');
+                htmlHelper.notifySuccessMessage('提示', '新增管理员成功');
                 $("#userTable").bootstrapTable('refresh');
             } else {
                 htmlHelper.showDanger(res.error);

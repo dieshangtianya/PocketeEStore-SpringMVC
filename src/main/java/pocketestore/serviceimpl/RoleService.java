@@ -1,6 +1,7 @@
 package pocketestore.serviceimpl;
 
 import pocketestore.dao.IRoleDao;
+import pocketestore.infrastructure.exceptions.BusinessException;
 import pocketestore.model.PaginationData;
 import pocketestore.model.Role;
 import pocketestore.service.IRoleService;
@@ -35,5 +36,37 @@ public class RoleService implements IRoleService {
             ex.printStackTrace();
             return new PaginationData<>();
         }
+    }
+
+    @Override
+    public boolean addRole(Role role) throws Exception {
+        Role existedRole = roleDao.getRoleByName(role.getRoleName());
+        if (existedRole != null) {
+            throw new BusinessException("已存在相同名称的角色");
+        }
+        return roleDao.add(role);
+    }
+
+    @Override
+    public boolean updateRole(Role role) throws Exception {
+        Role existedRole = roleDao.getRoleByName(role.getRoleName());
+        if (existedRole != null && !existedRole.getId().equals(role.getId())) {
+            // 如果id不同，但是名称相同
+            throw new BusinessException("已存在相同名称的角色");
+        }
+        return roleDao.update(role);
+    }
+
+    @Override
+    public boolean deleteRole(String roleId) throws Exception {
+        Role existedRole = roleDao.getById(roleId);
+        if (existedRole == null) {
+            throw new BusinessException("要删除的角色不存在");
+        }
+        if (existedRole.getRoleName().equals("Administrator")) {
+            throw new BusinessException("管理员角色不允许删除");
+        }
+        // to do --删除角色关联的权限
+        return roleDao.remove(roleId);
     }
 }

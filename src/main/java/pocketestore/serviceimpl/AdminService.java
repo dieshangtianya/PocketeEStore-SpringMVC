@@ -84,7 +84,10 @@ public class AdminService implements IAdminService {
 
     @Override
     public boolean updateAdmin(Admin admin) throws Exception {
-        Admin existAdmin = adminDao.getById(admin.getId());
+        Admin existAdmin = adminDao.getByAdminName(admin.getAdminName());
+        if (existAdmin != null && !existAdmin.getId().equals(admin.getId())){
+            throw new BusinessException("已存在用户名为" + admin.getAdminName() + "的用户");
+        }
         if (!admin.getPassword().equals(existAdmin.getPassword())) {
             String md5Pwd = getMD5PasswordFromBase64(admin.getPassword());
             admin.setPassword(md5Pwd);

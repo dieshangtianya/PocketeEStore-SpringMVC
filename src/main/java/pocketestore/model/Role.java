@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Role extends EntityBase{
     private String roleName;
-    private String state;
+    private State state;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createdDate;
 
@@ -18,11 +18,11 @@ public class Role extends EntityBase{
         this.roleName = roleName;
     }
 
-    public String getState() {
+    public State getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(State state) {
         this.state = state;
     }
 
